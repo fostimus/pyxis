@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const db = "./models";
 
 const port = process.env.PORT || 4000;
 
