@@ -1,0 +1,12 @@
+header {
+  border-bottom: 2px solid black;
+}
+
+nav li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown {
+  display: inline-block;
+}
