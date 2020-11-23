@@ -25,5 +25,9 @@ app.post("/search", (req, res) => {
   res.send(req.body);
 });
 
+app.get("/dashboard", (req, res) => {
+  res.render("dashboard");
+});
+
 console.log("Listening to port....", port);
 app.listen(port);
