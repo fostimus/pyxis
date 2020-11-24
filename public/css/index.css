@@ -20,6 +20,7 @@
 body,
 main {
   position: relative;
+  font-family: "DM Sans", sans-serif;
 }
 
 .container {
@@ -87,6 +88,12 @@ header {
 .main-event {
   font-size: 12px;
   width: 200px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.explore-item-text,
+.graph-text {
+  font-family: "Noto Sans", sans-serif;
 }
 
 .caption {

@@ -67,8 +67,27 @@
   <section class="explore row home-section">
     <div class="explore-top">
       <div class="explore-top-left">
-        <%- include("partials/carousel", {id: "trending", hide: false, name: "What's trending"}) %>
-        <%- include("partials/carousel", {id: "deals", hide: true, name: "Weekly Deals"}) %>
+        <%- include("partials/carousel",
+        {
+          id: "trending",
+          hide: false,
+          name: "What's trending",
+          images: [
+            "images/carousel1/Group 17.svg",
+            "images/carousel1/Group 27.svg",
+            "images/carousel1/Group 28.svg"
+          ]
+        }) %>
+        <%- include("partials/carousel",
+        {
+          id: "deals",
+          hide: true,
+          name: "Weekly Deals",
+          images: [
+            "images/carousel2/Group 29.svg",
+            "images/carousel2/Group 30.svg"
+          ]
+        }) %>
       </div>
       <div class="vertical-line"></div>
       <div class="explore-top-right hide">
