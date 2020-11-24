@@ -45,18 +45,15 @@ h4 {
   margin: 10px 0;
 }
 
-.member-table thead tr {
+.member-table .thead .tr {
   border-top: 1px solid #ffdfa1;
   border-bottom: 1px solid #ffdfa1;
-}
-
-.member-table thead {
   font-size: 11px;
 }
 
-.member-table th,
-.member-table td {
-  width: 20%;
+.member-table .tr {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 900px) {
@@ -73,5 +70,23 @@ h4 {
     width: 400px;
     background-color: #ffdfa1;
     font-size: 48px;
+  }
+
+  .sort-buttons {
+    font-size: 24px;
+  }
+
+  .sort-buttons button {
+    padding: 0.25em 1em;
+    border-radius: 15px;
+  }
+
+  .member-table {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .member-table .th {
+    font-size: 24px;
   }
 }
