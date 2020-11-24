@@ -2,6 +2,10 @@
   display: none;
 }
 
+main {
+  position: relative;
+}
+
 /**
  * Header Styles
  */
@@ -100,7 +104,8 @@ header {
   margin-bottom: 25px;
 }
 .explore-bottom {
-  display: flex;
+  margin-bottom: 60px;
+  /* display: flex; */
 }
 
 .text-box {
@@ -112,10 +117,18 @@ header {
   display: inline-block;
 }
 
+.subscribe-form input {
+  width: 250px;
+}
+
 .subscribe {
   background-color: #ffdfa1;
   border-radius: 15px;
   height: 36px;
+
+  position: absolute;
+  border: none;
+  right: 0;
 }
 
 /**
@@ -123,11 +136,18 @@ header {
  */
 
 .background {
-  /* background-image: url("../icons/desktop/top-right.svg"); */
   position: absolute;
   z-index: -1;
+}
+
+.top {
   top: 0;
   right: 0;
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
 }
 
 /* not mobile */
