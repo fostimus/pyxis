@@ -1,115 +1,116 @@
- <section class="background top">
-   <picture>
-     <source media="(min-width: 600px)" srcset="icons/desktop/top-right.svg">
-     <img src="icons/mobile/top-right.svg" alt="IfItDoesntMatchAnyMedia">
-   </picture>
- </section>
+<section class="background top">
+  <picture>
+    <source media="(min-width: 600px)" srcset="icons/desktop/top-right.svg">
+    <img src="icons/mobile/top-right.svg" alt="IfItDoesntMatchAnyMedia">
+  </picture>
+</section>
 
- <main>
-   <div class="container">
-     <section class="tagline row home-section container">
-       <div class="main-event">
-         In-N-Out opens first 2 Colorado restaurants, creating a frenzy with wait times of up to 12 hours
-         <div class="caption">
-           NOV 20, 2020
-         </div>
-       </div>
-       <div class="in-n-out">
-         <img src="icons/in-n-out.svg" alt="">
-       </div>
-       <div class="search-form">
-         <div class="search">
-           <form action="/search" method="post">
-             <input class="text-input" type="text" name="search" value="" placeholder="Burger King, Thai, ...">
-             <button class="input-button" type="submit"><img src="icons/mag-glass.svg" alt=""></button>
-           </form>
-         </div>
-       </div>
-     </section>
-     <section class="discover row home-section">
-       <div class="section-tagline">
-         Discover
-       </div>
-       <div class="discover-items">
-         <div class="discover-item">
-           <img src="icons/dining.svg" alt="">
-           <div class="discover-item-text">
-             Dining
-           </div>
-         </div>
-         <div class="discover-item">
-           <img src="icons/events.svg" alt="">
-           <div class="discover-item-text">
-             Events
-           </div>
-         </div>
-         <div class="discover-item">
-           <img src="icons/deals.svg" alt="">
-           <div class="discover-item-text">
-             Deals
-           </div>
-         </div>
-         <div class="discover-item">
-           <img src="icons/covid.svg" alt="">
-           <div class="discover-item-text">
-             Covid
-           </div>
-         </div>
-         <div class="discover-item">
-           <img src="icons/more.svg" alt="">
-           <div class="discover-item-text">
-             More
-           </div>
-         </div>
-       </div>
-     </section>
+<main>
+  <!-- <div > -->
+  <section class="tagline row home-section container">
+    <div class="main-event">
+      In-N-Out opens first 2 Colorado restaurants, creating a frenzy with wait times of up to 12 hours
+      <div class="caption">
+        NOV 20, 2020
+      </div>
+    </div>
+    <div class="in-n-out">
+      <img src="icons/in-n-out.svg" alt="">
+    </div>
+    <div class="search-form">
+      <div class="search">
+        <form action="/search" method="post">
+          <input class="text-input" type="text" name="search" value="" placeholder="Burger King, Thai, ...">
+          <button class="input-button" type="submit"><img src="icons/mag-glass.svg" alt=""></button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="discover row home-section">
+    <div class="section-tagline">
+      Discover
+    </div>
+    <div class="discover-items">
+      <div class="discover-item">
+        <img src="icons/dining.svg" alt="">
+        <div class="discover-item-text">
+          Dining
+        </div>
+      </div>
+      <div class="discover-item">
+        <img src="icons/events.svg" alt="">
+        <div class="discover-item-text">
+          Events
+        </div>
+      </div>
+      <div class="discover-item">
+        <img src="icons/deals.svg" alt="">
+        <div class="discover-item-text">
+          Deals
+        </div>
+      </div>
+      <div class="discover-item">
+        <img src="icons/covid.svg" alt="">
+        <div class="discover-item-text">
+          Covid
+        </div>
+      </div>
+      <div class="discover-item">
+        <img src="icons/more.svg" alt="">
+        <div class="discover-item-text">
+          More
+        </div>
+      </div>
+    </div>
+  </section>
 
-     <section class="explore row home-section">
-       <div class="explore-top">
-         <div class="explore-top-left">
-           <%- include("partials/carousel", {hidden: false, name: "What's trending"}) %>
-           <%- include("partials/carousel", {hidden: true, name: "Weekly Deals"}) %>
-         </div>
-         <div class="explore-top-right hidden">
-           <%- include("partials/vertical-explore", {name: "In your city"}) %>
-           <%- include("partials/vertical-explore", {name: "Restaurant week"}) %>
-         </div>
-       </div>
+  <section class="explore row home-section">
+    <div class="explore-top">
+      <div class="explore-top-left">
+        <%- include("partials/carousel", {id: "trending", hide: false, name: "What's trending"}) %>
+        <%- include("partials/carousel", {id: "deals", hide: true, name: "Weekly Deals"}) %>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="explore-top-right hide">
+        <%- include("partials/vertical-explore", {name: "In your city"}) %>
+        <%- include("partials/vertical-explore", {name: "Restaurant week"}) %>
+      </div>
+    </div>
 
 
-       <div class="explore-bottom row">
-         <div class="member-benefits col half container">
-           <h3>Membership Benefits</h3>
-           <div class="text-box">
-             <h5>Restaurant-goers,</h5>
-             sign up and receive weekly promotions and deals.
-           </div>
-           <div class="text-box">
-             <h5>Restaurant-owners,</h5>
-             sign up for exclusive information on partnership.
-           </div>
+    <div class="explore-bottom row">
+      <div class="member-benefits col half container">
+        <h3>Membership Benefits</h3>
+        <div class="text-box">
+          <h5>Restaurant-goers,</h5>
+          sign up and receive weekly promotions and deals.
+        </div>
+        <div class="text-box">
+          <h5>Restaurant-owners,</h5>
+          sign up for exclusive information on partnership.
+        </div>
 
-           <form class="subscribe-form" action="/subscribe" method="post">
-             <input class="text-input" type="text" name="" value="" placeholder="Enter your email">
-             <button class="subscribe" type="submit">Subscribe</button>
-           </form>
-         </div>
-         <div class="your-city col half container">
-           <h3>In your city</h3>
-           <img height="140px" width="130px" src="test.png" alt="">
-           <div class="caption">
-             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
-           </div>
-         </div>
-       </div>
-     </section>
+        <form class="subscribe-form" action="/subscribe" method="post">
+          <input class="text-input" type="text" name="" value="" placeholder="Enter your email">
+          <button class="subscribe" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="your-city col half container">
+        <h3>In your city</h3>
+        <img height="140px" width="130px" src="test.png" alt="">
+        <div class="caption">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
+        </div>
+      </div>
+    </div>
+  </section>
 
-     <section class="background bottom">
-       <picture>
-         <source media="(min-width: 600px)" srcset="icons/desktop/bottom-left.svg">
-         <img src="icons/mobile/bottom-left.svg" alt="IfItDoesntMatchAnyMedia">
-       </picture>
-     </section>
-   </div>
+  <section class="background bottom">
+    <picture>
+      <source media="(min-width: 600px)" srcset="icons/desktop/bottom-left.svg">
+      <img src="icons/mobile/bottom-left.svg" alt="IfItDoesntMatchAnyMedia">
+    </picture>
+  </section>
+  <!-- </div> -->
 
- </main>
+</main>
