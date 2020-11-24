@@ -1,14 +1,23 @@
-const sortButtons = document.querySelectorAll(".sort-buttons input");
+const sortButtons = document.querySelectorAll(".sort-button");
 
 const responsiveChange = () => {
   const [vw, vh] = getViewport();
   if (inputsAllButtons() && vw >= 900) {
-    for (const input of sortButtons) {
+    for (const sortButton of sortButtons) {
+      const input = sortButton.querySelector("input");
       input.setAttribute("type", "checkbox");
+
+      const text = document.createElement("div");
+      text.classList.add("sort-button-text");
+      text.innerText = input.getAttribute("value");
+      sortButton.appendChild(text);
     }
   } else if (!inputsAllButtons() && vw < 900) {
-    for (const input of sortButtons) {
+    for (const sortButton of sortButtons) {
+      const input = sortButton.querySelector("input");
       input.setAttribute("type", "button");
+
+      sortButton.querySelector(".sort-button-text").remove();
     }
   }
 };
@@ -16,14 +25,15 @@ const responsiveChange = () => {
 //
 
 window.onresize = responsiveChange;
+responsiveChange();
 
 /**
  * Helpers
  */
 
 function inputsAllButtons() {
-  for (const input of sortButtons) {
-    if (input.getAttribute("type") !== "button") {
+  for (const sortButton of sortButtons) {
+    if (sortButton.querySelector("input").getAttribute("type") !== "button") {
       return false;
     }
   }

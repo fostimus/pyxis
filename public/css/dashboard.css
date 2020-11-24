@@ -20,22 +20,35 @@ h4 {
   margin-top: 30px;
 }
 
-.sort-buttons {
+.member-controls {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
 }
 
-.sort-buttons input {
+.sort-buttons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 270px;
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.member-controls input {
   background-color: #e5e5e5;
   color: #494949;
   border: none;
   border-radius: 10px;
 }
 
-.sort-buttons input:hover,
-.sort-buttons input:active,
-.sort-buttons input:focus {
+.member-controls input:hover,
+.member-controls input:active,
+.member-controls input:focus {
   background-color: #ffdfa1;
   outline: none;
 }
@@ -122,11 +135,26 @@ h4 {
     font-size: 48px;
   }
 
-  .sort-buttons {
+  .member-controls {
     font-size: 24px;
+    margin-left: 30px;
   }
 
-  .sort-buttons input {
+  .member-controls,
+  .sort-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .sort-buttons {
+    background-color: #f6f6f6;
+    padding: 20px 33px;
+    font-size: 20px;
+  }
+
+  .member-controls input {
     padding: 0.25em 1em;
     border-radius: 15px;
   }
@@ -134,10 +162,23 @@ h4 {
   .member-table {
     font-size: 20px;
     margin: 10px 0;
+    width: 820px;
+  }
+
+  .tbody {
+    height: 550px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
   }
 
   .member-table .th {
     font-size: 24px;
+  }
+
+  .member-info-main {
+    display: flex;
+    justify-content: space-between;
   }
 
   .graphs-controls {
