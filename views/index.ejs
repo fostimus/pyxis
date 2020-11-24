@@ -67,15 +67,12 @@
      <section class="explore row home-section">
        <div class="explore-top">
          <div class="explore-top-left">
-
            <%- include("partials/carousel", {hidden: false, name: "What's trending"}) %>
-
            <%- include("partials/carousel", {hidden: true, name: "Weekly Deals"}) %>
          </div>
-         <div class="explore-top-right">
-           <div class="vertical-explore">
-
-           </div>
+         <div class="explore-top-right hidden">
+           <%- include("partials/vertical-explore", {name: "In your city"}) %>
+           <%- include("partials/vertical-explore", {name: "Restaurant week"}) %>
          </div>
        </div>
 
