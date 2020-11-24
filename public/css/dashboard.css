@@ -26,16 +26,16 @@ h4 {
   font-size: 12px;
 }
 
-.sort-buttons button {
+.sort-buttons input {
   background-color: #e5e5e5;
   color: #494949;
   border: none;
   border-radius: 10px;
 }
 
-.sort-buttons button:hover,
-.sort-buttons button:active,
-.sort-buttons button:focus {
+.sort-buttons input:hover,
+.sort-buttons input:active,
+.sort-buttons input:focus {
   background-color: #ffdfa1;
   outline: none;
 }
@@ -126,7 +126,7 @@ h4 {
     font-size: 24px;
   }
 
-  .sort-buttons button {
+  .sort-buttons input {
     padding: 0.25em 1em;
     border-radius: 15px;
   }
