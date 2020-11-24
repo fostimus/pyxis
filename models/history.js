@@ -9,15 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.history.belongsTo(models.restaurantGoer);
-      models.history.belongsTo(models.restaurantOwner);
+      models.history.belongsTo(models.user);
     }
   }
   history.init(
     {
       searched: DataTypes.STRING,
-      restaurantGoerId: DataTypes.INTEGER,
-      restaurantOwnerId: DataTypes.INTEGER
+      userId: DataTypes.INTEGER
     },
     {
       sequelize,

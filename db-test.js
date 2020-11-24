@@ -1,16 +1,16 @@
 const db = require("./models");
 
-db.restaurantGoer
+db.user
   .findOrCreate({
     where: { email: "email@email.com" }
   })
-  .then(([restaurantGoer, created]) => {
-    console.log(restaurantGoer);
-    restaurantGoer
+  .then(([user, created]) => {
+    console.log(user);
+    user
       .createHistory({
         searched: "Taco Bell"
       })
       .then(history => {
-        console.log(`${restaurantGoer.email} searched ${history.searched}`);
+        console.log(`${user.email} searched ${history.searched}`);
       });
   });

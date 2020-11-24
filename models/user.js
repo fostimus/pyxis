@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class restaurantGoer extends Model {
+  class user extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.restaurantGoer.hasMany(models.history);
+      models.user.hasMany(models.history);
     }
 
     validPassword(passwordTyped) {
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       return userData;
     }
   }
-  restaurantGoer.init(
+  user.init(
     {
       email: {
         type: DataTypes.STRING,
@@ -65,16 +65,17 @@ module.exports = (sequelize, DataTypes) => {
       },
       zipCode: DataTypes.STRING,
       birthdate: DataTypes.DATE,
+      description: DataTypes.STRING,
       diningStyle: DataTypes.STRING,
-      diet: DataTypes.STRING
+      diet: DataTypes.STRING,
+      userType: DataTypes.STRING
     },
     {
       sequelize,
-      modelName: "restaurantGoer"
+      modelName: "user"
     }
   );
-
-  restaurantGoer.beforeCreate((pendingUser, options) => {
+  user.beforeCreate((pendingUser, options) => {
     if (pendingUser && pendingUser.password) {
       // hash the password
       let hash = bcrypt.hashSync(pendingUser.password, 12);
@@ -82,5 +83,5 @@ module.exports = (sequelize, DataTypes) => {
       pendingUser.password = hash;
     }
   });
-  return restaurantGoer;
+  return user;
 };
