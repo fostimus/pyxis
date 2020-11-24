@@ -3,6 +3,16 @@
   src: url("../fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/Noto_Sans/NotoSans-Regular.ttf") format("truetype");
+}
+
 .hide {
   display: none;
 }
@@ -51,6 +61,10 @@ header {
   justify-content: space-between;
   gap: 15px;
   font-size: 12px;
+}
+
+.sign-up {
+  font-family: "Alegreya Sans", sans-serif;
 }
 
 /**
@@ -194,6 +208,10 @@ header {
   height: 36px;
 }
 
+.form-flex button {
+  width: 100px;
+}
+
 /**
  * Background Styles
  */
@@ -222,16 +240,29 @@ footer {
 /**
  * Sign Up/Login Styles
  */
+
 .form-flex {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   gap: 15px;
+  margin: 0 auto;
+  width: 200px;
 }
 
 .form-field {
+  color: #8f8f8f;
+}
+
+.form-field input {
   display: flex;
   flex-flow: column wrap;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+}
+
+.form-field label {
+  margin: 0;
 }
 
 .modal-header {
@@ -429,6 +460,23 @@ footer {
     bottom: -60px;
     display: block;
     margin: 0 auto;
+  }
+
+  .signup-title button {
+    font-size: 28px;
+    height: 50px;
+  }
+
+  .form-flex {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .form-field {
+    font-size: 22px;
+  }
+  .form-field input {
+    height: 30px;
+    width: 275px;
   }
 }
 
