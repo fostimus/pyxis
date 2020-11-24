@@ -2,7 +2,8 @@
   display: none;
 }
 
-body {
+body,
+main {
   position: relative;
 }
 
@@ -202,6 +203,10 @@ header {
   width: 220px;
 }
 
+footer {
+  display: none;
+}
+
 /* not mobile */
 @media (min-width: 600px) {
   .headerTitle {
@@ -338,13 +343,32 @@ header {
     display: none;
   }
 
+  .subscribe-form,
+  .subscribe-form input {
+    width: 277px;
+    height: 40px;
+  }
+
+  .subscribe-form button {
+    top: 2px;
+    height: 37px;
+  }
+
   .top img {
     right: -10%;
     width: 750px;
   }
 
   .bottom img {
-    width: 450px;
+    width: 500px;
+  }
+
+  footer {
+    position: relative;
+    left: -15px;
+    bottom: -60px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
