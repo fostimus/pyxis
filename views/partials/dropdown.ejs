@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <button type="button" id="<%= id %>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <% if (button) { %>
+      <%= button %>
+    <% } else { %>
+      <img src="icons/menu.svg" alt="">
+    <% } %>
+  </button>
+  <nav class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <% options.forEach(option => { %>
+     <a class="dropdown-item" href="#"><%= option %></a>
+    <% }) %>
+  </nav>
+</div>

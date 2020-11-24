@@ -37,7 +37,12 @@ app.use(passport.session());
  * Routes
  */
 app.get("/", (req, res) => {
-  res.render("index");
+  const signUpModal = {
+    name: "signUpModal",
+    title: "./modals/signUpTitle.ejs",
+    body: "./modals/signUp.ejs"
+  };
+  res.render("index", { signUpModal: signUpModal });
 });
 
 app.post("/search", (req, res) => {

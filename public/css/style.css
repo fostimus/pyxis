@@ -172,14 +172,16 @@ header {
   width: 185px;
 }
 
+.subscribe-form button {
+  position: absolute;
+  border: none;
+  right: 0;
+}
+
 .subscribe {
   background-color: #ffdfa1;
   border-radius: 15px;
   height: 36px;
-
-  position: absolute;
-  border: none;
-  right: 0;
 }
 
 /**
@@ -205,6 +207,41 @@ header {
 
 footer {
   display: none;
+}
+
+/**
+ * Sign Up/Login Styles
+ */
+.form-flex {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.modal-header {
+  padding: 0;
+}
+
+.signup-title {
+  display: flex;
+  width: 100%;
+}
+
+.signup-title button {
+  width: 50%;
+  height: 42px;
+  border: 1px solid #8f8f8f;
+  background-color: white;
+  color: #8f8f8f;
+  outline: none;
+  border-radius: 5px;
+}
+
+.signup-title button:active,
+.signup-title button:focus {
+  background-color: #8f8f8f;
+  color: white;
 }
 
 /* not mobile */
@@ -371,9 +408,3 @@ footer {
     margin: 0 auto;
   }
 }
-
-/* @media (min-width: 600px) {
-  .top img {
-    right: 0;
-  }
-} */

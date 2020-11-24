@@ -1,0 +1,27 @@
+  
+
+
+<form class="form-flex" action="/signup" method="post">
+  <label for="firstName">First Name</label>
+  <input type="text" name="firstName" value="">
+
+  <label for="firstName">Last Name</label>
+  <input type="text" name="lastName" value="">
+
+  <label for="firstName">Email Address</label>
+  <input type="text" name="email" value="">
+
+  <label for="firstName">City</label>
+  <input type="text" name="email" value="">
+
+  <%- include("../dropdown", {id: "signUpDropdown", button: "What best describes your company?", options: ["Independent Restaurant", "Chain Restaurant", "Non-commercial"]}) %>
+
+  <input type="checkbox" name="subscribe-checkbox" value="">
+  <label for="subscribe-checkbox">
+    Sign me up for the Pyxis newsletter
+    <br>
+    By clicking above, I agree to the terms of service
+  </label>
+
+  <button class="subscribe" type="submit" name="button">Sign Up</button>
+</form>
