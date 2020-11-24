@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 /**
  * Header Styles
  */
@@ -43,7 +47,7 @@ header {
 }
 
 .caption {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .search {
@@ -51,7 +55,7 @@ header {
   display: inline-block;
 }
 
-.search button {
+.input-button {
   position: absolute;
   background: transparent;
   border: none;
@@ -59,15 +63,16 @@ header {
   top: 5px;
 }
 
-.search input {
+.text-input {
   border: 2px solid #ffb82f;
   border-radius: 15px;
   width: 205px;
   height: 36px;
 }
 
-.discover-tagline {
+.section-tagline {
   height: 23px;
+  margin-bottom: 15px;
 }
 
 .discover-items {
@@ -88,11 +93,43 @@ header {
 }
 
 /**
+ * Explore Styles
+ */
+
+.my-carousel {
+  margin-bottom: 25px;
+}
+.explore-bottom {
+  display: flex;
+}
+
+.text-box {
+  margin: 15px 0;
+}
+
+.subscribe-form {
+  position: relative;
+  display: inline-block;
+}
+
+.subscribe {
+  background-color: #ffdfa1;
+  border-radius: 15px;
+  height: 36px;
+}
+
+/**
  * Background Styles
  */
+
 .background {
+  /* background-image: url("../icons/desktop/top-right.svg"); */
   position: absolute;
   z-index: -1;
   top: 0;
   right: 0;
+}
+
+/* not mobile */
+@media (min-width: 450px) {
 }
