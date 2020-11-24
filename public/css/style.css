@@ -2,7 +2,7 @@
  * Header Styles
  */
 header {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .dropdown {
@@ -14,6 +14,7 @@ header {
 }
 
 .dropdown button {
+  padding-left: 0;
   background: transparent;
   border: none;
 }
@@ -28,6 +29,11 @@ header {
 /**
  * Home Styles
  */
+
+.home-section {
+  flex-flow: column wrap;
+  margin-top: 50px;
+}
 
 .tagline {
 }
@@ -79,4 +85,14 @@ header {
   justify-content: space-around;
   align-content: center;
   cursor: pointer;
+}
+
+/**
+ * Background Styles
+ */
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
 }
