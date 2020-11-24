@@ -4,6 +4,7 @@ const app = express();
 const db = require("./models");
 const session = require("express-session");
 const passport = require("./passport");
+const flash = require("connect-flash");
 
 const port = process.env.PORT || 4000;
 
@@ -29,20 +30,68 @@ app.use(
   })
 );
 
+app.use(flash());
+
 // middleware - passport config
 app.use(passport.initialize());
 app.use(passport.session());
+
+const signUpModal = {
+  name: "signUpModal",
+  title: "./modals/signUpTitle.ejs",
+  body: "./modals/signUp.ejs"
+};
 
 /**
  * Routes
  */
 app.get("/", (req, res) => {
-  const signUpModal = {
-    name: "signUpModal",
-    title: "./modals/signUpTitle.ejs",
-    body: "./modals/signUp.ejs"
-  };
-  res.render("index", { signUpModal: signUpModal });
+  res.render("home", { index: true, signUpModal: signUpModal });
+});
+
+app.get("/home", (req, res) => {
+  res.render("home", { index: true, signUpModal: signUpModal });
+});
+
+// didn't create a field for subscribed in database... dang it
+app.post("/signup", (req, res) => {
+  // find or create a user, providing the name and password as default values
+  db.user
+    .findOrCreate({
+      where: {
+        email: req.body.email
+      },
+      defaults: {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        password: req.body.password,
+        zipCode: req.body.zipCode,
+        userType: "owner"
+      }
+    })
+    .then(([user, created]) => {
+      if (created) {
+        // if created, success and login
+        console.log("user created");
+        res.redirect("/");
+
+        // passport isn't working
+        passport.authenticate("local", {
+          successRedirect: "/",
+          successFlash: "Account created and logged in"
+        })(req, res);
+      } else {
+        // if not created, the email already exists
+        // flash message isn't working
+        req.flash("error", "Email already exists");
+        res.redirect("/");
+      }
+    })
+    .catch(error => {
+      // if an error occurs, let's see what the error is
+      req.flash("error", error.message);
+      res.redirect("/");
+    });
 });
 
 app.post("/search", (req, res) => {
@@ -51,7 +100,7 @@ app.post("/search", (req, res) => {
 });
 
 app.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+  res.render("dashboard", { index: false, signUpModal: signUpModal });
 });
 
 console.log("Listening to port....", port);
