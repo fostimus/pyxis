@@ -98,10 +98,13 @@ header {
 
 .section-tagline {
   height: 23px;
+  margin-left: 20px;
   margin-bottom: 15px;
 }
 
 .discover-items {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   background: #fff1d7;
@@ -123,8 +126,24 @@ header {
  */
 
 .my-carousel {
+  width: 90%;
+  margin: 0 auto;
   margin-bottom: 25px;
 }
+
+.half {
+  width: 150px;
+  font-size: 8px;
+}
+
+.half h3 {
+  font-size: 12px;
+}
+
+.half h5 {
+  font-size: 10px;
+}
+
 .explore-bottom {
   margin-bottom: 60px;
   /* display: flex; */
@@ -219,6 +238,21 @@ header {
 
   .text-input {
     width: 490px;
+  }
+
+  /**
+   */
+
+  .section-tagline {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .discover-items {
+    width: 100%;
+  }
+
+  .my-carousel {
+    width: 100%;
   }
 
   .top img {
