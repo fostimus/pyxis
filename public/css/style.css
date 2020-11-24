@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
+}
+
 .hide {
   display: none;
 }
@@ -17,7 +22,12 @@ a {
  */
 header {
   display: flex;
+  justify-content: space-between;
   padding-top: 40px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
 }
 
 .dropdown {
@@ -38,7 +48,7 @@ header {
 .header-right {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 15px;
   font-size: 12px;
 }
@@ -219,6 +229,11 @@ footer {
   gap: 15px;
 }
 
+.form-field {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .modal-header {
   padding: 0;
 }
@@ -239,15 +254,20 @@ footer {
 }
 
 .signup-title button:active,
-.signup-title button:focus {
+.signup-title button:focus,
+.signup-title button:hover {
   background-color: #8f8f8f;
   color: white;
 }
 
 /* not mobile */
-@media (min-width: 600px) {
+
+/**
+ * NEED medium screen styles
+ */
+@media (min-width: 900px) {
   .headerTitle {
-    font-size: 56px;
+    font-size: 44px;
   }
 
   .header-left {
@@ -260,14 +280,17 @@ footer {
     width: 60px;
   }
 
-  .header-right,
+  .header-right {
+    font-size: 18px;
+  }
+
   .half h3,
   .section-tagline {
     font-size: 36px;
   }
 
   .header-right a {
-    margin: 10px;
+    margin: 5px;
     display: inline;
   }
 
@@ -406,5 +429,24 @@ footer {
     bottom: -60px;
     display: block;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .headerTitle {
+    font-size: 56px;
+  }
+
+  .header-right {
+    font-size: 30px;
+  }
+
+  .header-right a {
+    margin: 10px;
+    display: inline;
+  }
+
+  .header-right img {
+    display: none;
   }
 }
