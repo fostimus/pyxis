@@ -61,7 +61,7 @@ header {
 }
 
 .caption {
-  font-size: 12px;
+  font-size: 9px;
 }
 
 .in-n-out {
@@ -98,13 +98,15 @@ header {
 
 .section-tagline {
   height: 23px;
-  margin-left: 20px;
   margin-bottom: 15px;
 }
 
+.discover {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .discover-items {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   background: #fff1d7;
@@ -144,9 +146,16 @@ header {
   font-size: 10px;
 }
 
+.explore {
+  padding-bottom: 40px;
+}
+
 .explore-bottom {
-  margin-bottom: 60px;
-  /* display: flex; */
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .text-box {
@@ -159,7 +168,7 @@ header {
 }
 
 .subscribe-form input {
-  width: 250px;
+  width: 185px;
 }
 
 .subscribe {
@@ -190,7 +199,7 @@ header {
 .bottom img {
   bottom: 0;
   left: 0;
-  width: 150px;
+  width: 220px;
 }
 
 /* not mobile */
@@ -247,12 +256,15 @@ header {
     margin: 0;
     margin-bottom: 15px;
   }
-  .discover-items {
-    width: 100%;
-  }
 
   .my-carousel {
-    width: 100%;
+    /* width: 100%; */
+    display: block;
+    width: 50%;
+  }
+
+  .caption {
+    font-size: 12px;
   }
 
   .top img {
