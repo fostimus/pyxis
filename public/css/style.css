@@ -1,3 +1,6 @@
+/**
+ * Header Styles
+ */
 header {
   margin-top: 20px;
 }
@@ -15,8 +18,65 @@ header {
   border: none;
 }
 
-.user-icon {
+.account {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
+  gap: 15px;
+  /* margin-right: 20px; */
+}
+
+/**
+ * Home Styles
+ */
+
+.tagline {
+}
+
+.main-event {
+  font-size: 16px;
+}
+
+.caption {
+  font-size: 10px;
+}
+
+.search {
+  position: relative;
+  display: inline-block;
+}
+
+.search button {
+  position: absolute;
+  background: transparent;
+  border: none;
+  right: 8px;
+  top: 5px;
+}
+
+.search input {
+  border: 2px solid #ffb82f;
+  border-radius: 15px;
+  width: 205px;
+  height: 36px;
+}
+
+.discover-tagline {
+  height: 23px;
+}
+
+.discover-items {
+  display: flex;
+  justify-content: space-around;
+  background: #fff1d7;
+  border-radius: 15px;
+  height: 77px;
+}
+
+.discover-item {
+  margin-top: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-content: center;
+  cursor: pointer;
 }
