@@ -56,10 +56,26 @@ h4 {
   justify-content: space-between;
 }
 
+.graphs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.graphs-controls {
+  background-color: #f6f6f6;
+  width: 259px;
+  height: 195px;
+}
+
 .graphs-container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
+  font-size: 12px;
+}
+
+.graph img {
+  width: 180px;
 }
 
 @media (min-width: 900px) {
@@ -96,7 +112,20 @@ h4 {
     font-size: 24px;
   }
 
+  .graphs-controls {
+    display: block;
+  }
+
+  .graph img {
+    width: 100%;
+  }
+
+  .graph {
+    display: flex;
+  }
+
   .graph-text {
+    margin: auto;
     display: block;
   }
 }

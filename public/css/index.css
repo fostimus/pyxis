@@ -22,6 +22,10 @@ main {
   position: relative;
 }
 
+.container {
+  max-width: 1440px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -336,15 +340,25 @@ footer {
   }
 
   .in-n-out {
-    right: 100px;
+    right: 125px;
   }
 
   .in-n-out img {
-    width: 470px;
+    width: 570px;
   }
 
   .text-input {
+    height: 60px;
     width: 490px;
+    font-size: 22px;
+  }
+
+  .input-button {
+    top: 12px;
+  }
+
+  .input-button img {
+    height: 30px;
   }
 
   .discover-items {
@@ -447,7 +461,7 @@ footer {
 
   .top img {
     right: -10%;
-    width: 750px;
+    width: 1000px;
   }
 
   .bottom img {
