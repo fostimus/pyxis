@@ -58,13 +58,41 @@ h4 {
 
 .graphs {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .graphs-controls {
+  position: relative;
+  top: -60px;
+}
+
+.controls {
   background-color: #f6f6f6;
   width: 259px;
   height: 195px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-input input {
+  border: 1px solid #767676;
+  border-radius: 5px;
+}
+
+.date-input input[name="month"] {
+  width: 50px;
+}
+
+.date-input input[name="year"] {
+  width: 150px;
+}
+
+.date-input input::-webkit-input-placeholder {
+  text-align: center;
 }
 
 .graphs-container {
@@ -89,7 +117,7 @@ h4 {
     flex-flow: column wrap;
     gap: 20px;
     height: 220px;
-    width: 400px;
+    width: 696px;
     background-color: #ffdfa1;
     font-size: 48px;
   }
@@ -122,6 +150,7 @@ h4 {
 
   .graph {
     display: flex;
+    width: 425px;
   }
 
   .graph-text {

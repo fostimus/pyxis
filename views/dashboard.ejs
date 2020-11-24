@@ -62,7 +62,12 @@
 </section>
 <section class="graphs dashboard-section">
   <div class="graphs-controls hide">
-
+    <h4>Refine by</h4>
+    <div class="controls">
+      <%- include("partials/dateInput") %>
+      |
+      <%- include("partials/dateInput") %>
+    </div>
   </div>
   <div class="graphs-container">
     <%- include("partials/graph", {number: 1}) %>
