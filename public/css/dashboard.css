@@ -33,6 +33,32 @@ h4 {
   border-radius: 10px;
 }
 
+.sort-buttons button:hover,
+.sort-buttons button:active,
+.sort-buttons button:focus {
+  background-color: #ffdfa1;
+  outline: none;
+}
+
+.member-table {
+  font-size: 8px;
+  margin: 10px 0;
+}
+
+.member-table thead tr {
+  border-top: 1px solid #ffdfa1;
+  border-bottom: 1px solid #ffdfa1;
+}
+
+.member-table thead {
+  font-size: 11px;
+}
+
+.member-table th,
+.member-table td {
+  width: 20%;
+}
+
 @media (min-width: 900px) {
   h4 {
     font-size: 1.5rem;
