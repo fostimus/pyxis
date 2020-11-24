@@ -53,6 +53,7 @@ header {
 
 .main-event {
   font-size: 16px;
+  width: 200px;
 }
 
 .caption {
@@ -140,26 +141,25 @@ header {
  * Background Styles
  */
 
-.background {
+.background img {
   position: absolute;
   z-index: -1;
 }
 
-.top {
+/* .top {
   top: 0;
   right: 0;
-}
+} */
 
 .top img {
-  width: 250px;
-}
-
-.bottom {
-  bottom: 0;
-  left: 0;
+  top: 0;
+  right: 0;
+  width: 320px;
 }
 
 .bottom img {
+  bottom: 0;
+  left: 0;
   width: 150px;
 }
 
