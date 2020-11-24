@@ -218,8 +218,10 @@ header {
     width: 60px;
   }
 
-  .header-right {
-    font-size: 22px;
+  .header-right,
+  .half h3,
+  .section-tagline {
+    font-size: 36px;
   }
 
   .header-right a {
@@ -249,13 +251,24 @@ header {
     width: 490px;
   }
 
+  .discover-items {
+    height: 172px;
+    padding: 10px 0;
+  }
+
+  .discover-item {
+    font-size: 24px;
+  }
+
+  .discover-item img {
+    width: 50px;
+  }
+
   /**
    */
 
   .section-tagline {
-    font-size: 22px;
-    margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   .my-carousel {
@@ -311,6 +324,14 @@ header {
     position: absolute;
     bottom: 0;
     padding-bottom: 30px;
+  }
+
+  .half {
+    font-size: 14px;
+  }
+
+  .half h5 {
+    font-size: 24px;
   }
 
   .your-city {
